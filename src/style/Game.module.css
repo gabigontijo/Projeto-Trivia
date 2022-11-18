@@ -9,11 +9,12 @@
 .container_game {
   border: 3px solid red;
   display: grid;
-  grid-template-rows: 25vh 75vh;
+  grid-template-rows: 10vh 90vh;
   height: 100vh;
   width: 100vw;
 }
 
 .container_questions {
-  border: 1px solid green;
+  background-color: mediumaquamarine;
+  height: 90vh;
 }

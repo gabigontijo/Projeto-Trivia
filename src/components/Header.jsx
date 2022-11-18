@@ -19,7 +19,9 @@ class Header extends React.Component {
     const hash = md5(email).toString();
     return (
       <header className={ style.container_header }>
-        <img src={ logoTrivia } alt="logo-trivia" className={ style.logo_header } />
+        <div>
+          <img src={ logoTrivia } alt="logo-trivia" className={ style.logo_header } />
+        </div>
         <div className={ style.container_user_info }>
           <div className={ style.box_user }>
             <img

@@ -1,19 +1,22 @@
 .container_header {
-  /* background-color: orange; */
+  background-color: orange;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  height: 25vh;
+  height: 10vh;
 }
 
 .logo_header {
   height: 190px;
+  left: 15%;
+  padding-top: 10px;
+  position: absolute;
   width: 190px;
 }
 
 .container_user_info {
   display: grid;
   grid-template-columns: 3fr 1fr 1fr;
-  height: 25vh;
+  height: 10vh;
 }
 
 .box_user, .box_score {
