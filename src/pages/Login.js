@@ -4,13 +4,6 @@ import { connect } from 'react-redux';
 import reqApi from '../service/Api';
 import { addPlayer } from '../redux/action';
 import logoTrivia from '../img/logoTrivia.png';
-import amarelo from '../img/amarelo.png';
-import rosa from '../img/rosa.png';
-import verde from '../img/verde.png';
-import azul from '../img/azul.png';
-// import fundo from '../img/fundo.png';
-// import { updateToken } from '../redux/action';
-// import { saveLocalStorage } from '../service/LocalStorage';
 
 const OBJ = {
   disable: true,
@@ -52,10 +45,6 @@ class Login extends React.Component {
     const { disable, name, email } = this.state;
     return (
       <div className="login">
-        <img className="amarelo" src={ amarelo } alt="interrogação amarelo" />
-        <img className="azul" src={ azul } alt="interrogação azul" />
-        <img className="rosa" src={ rosa } alt="interrogação rosa" />
-        <img className="verde" src={ verde } alt="interrogação verde" />
         <div>
           <img className="logo" src={ logoTrivia } alt="logo Trivia" />
           <form>

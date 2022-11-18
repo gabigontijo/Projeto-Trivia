@@ -1,7 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import Header from '../components/Header';
+import { MD5 } from 'crypto-js';
+import logoTrivia from '../img/logoTrivia.png';
 
 class Feedback extends React.Component {
   handleClickPlayAgain = () => {
@@ -15,44 +16,73 @@ class Feedback extends React.Component {
   };
 
   render() {
-    const { assertions, score } = this.props;
+    const { assertions, score, email } = this.props;
     const acertos = 3;
+    const hash = MD5(email).toString();
     return (
       <div>
-        <Header />
-        <h1>Feedback</h1>
-        {
-          assertions < acertos ? <h1 data-testid="feedback-text">Could be better...</h1>
-            : <h1 data-testid="feedback-text">Well Done!</h1>
-        }
         <div>
-          <button
-            data-testid="btn-play-again"
-            type="button"
-            onClick={ this.handleClickPlayAgain }
-          >
-            Play Again
-          </button>
-          <button
-            data-testid="btn-ranking"
-            type="button"
-            onClick={ this.handleClickRancking }
-          >
-            Ranking
-          </button>
+          <img className="logo" src={ logoTrivia } alt="logo Trivia" />
         </div>
-        <h1>score</h1>
-        <p data-testid="feedback-total-score">{ score }</p>
-        <p>Total de acertos</p>
-        <p data-testid="feedback-total-question">{ assertions }</p>
+        <div className="feedback__containerAvatar">
+          <img data-testid="header-profile-picture" src={ `https://www.gravatar.com/avatar/${hash}` } alt="imagem de perfil" />
+        </div>
+        <div>
+          {
+            assertions < acertos
+              ? (
+                <h1
+                  data-testid="feedback-text"
+                  className="feekback__erros"
+                >
+                  Podia ser melhor...
+
+                </h1>
+              )
+
+              : (
+                <h1
+                  data-testid="feedback-text"
+                  className="feekback__acertos"
+                >
+                  Mandou Bem!
+
+                </h1>
+              )
+          }
+          <p data-testid="feedback-total-question">
+            {` Você acertou ${assertions} questões!` }
+
+          </p>
+          <p data-testid="feedback-total-score">
+            {` Um total de ${score} pontos`}
+          </p>
+          <div>
+            <button
+              data-testid="btn-play-again"
+              type="button"
+              onClick={ this.handleClickPlayAgain }
+            >
+              Play Again
+            </button>
+            <button
+              data-testid="btn-ranking"
+              type="button"
+              onClick={ this.handleClickRancking }
+            >
+              Ranking
+            </button>
+          </div>
+        </div>
       </div>
     );
   }
 }
 
-const mapStateToProps = (stateGlobal) => ({
-  assertions: stateGlobal.player.assertions,
-  score: stateGlobal.player.score,
+const mapStateToProps = (state) => ({
+  assertions: state.player.assertions,
+  score: state.player.score,
+  email: state.player.email,
 });
 
 Feedback.propTypes = {
@@ -61,6 +91,7 @@ Feedback.propTypes = {
     push: PropTypes.func,
   }).isRequired,
   score: PropTypes.number.isRequired,
+  email: PropTypes.string.isRequired,
 };
 
 export default connect(mapStateToProps)(Feedback);

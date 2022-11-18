@@ -28,38 +28,6 @@ body {
   width: 230px;
 }
 
-.amarelo {
-  height: 221px;
-  left: 1329px;
-  position: absolute;
-  top: 400px;
-  width: 150px;
-}
-
-.verde {
-  height: 221px;
-  left: 450px;
-  position: absolute;
-  top: 151px;
-  width: 150px;
-}
-
-.rosa {
-  height: 134px;
-  left: 1229px;
-  position: absolute;
-  top: 200px;
-  width: 92px;
-}
-
-.azul {
-  height: 153px;
-  left: 350px;
-  position: absolute;
-  top: 471px;
-  width: 104px;
-}
-
 .login form {
   align-items: center;
   background-color: white;
