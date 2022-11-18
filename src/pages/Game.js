@@ -4,7 +4,7 @@ import { connect } from 'react-redux';
 import Header from '../components/Header';
 import { getLocalStorage, removeLocalStorage } from '../service/localStorage';
 import { fetchApiQuestions, countScore, addAssertions } from '../redux/action';
-import '../style/Game.css';
+import style from '../style/Game.module.css';
 import Timer from '../components/Timer';
 
 class Game extends React.Component {
@@ -39,11 +39,6 @@ class Game extends React.Component {
       this.setState({ sortedAnswers: this.handleSortAnswers(answers) });
     });
   }
-
-  handleSettings = () => {
-    const { history } = this.props;
-    history.push('/settings');
-  };
 
   handleCountDificult = (dificult) => {
     const one = 1;
@@ -101,11 +96,11 @@ class Game extends React.Component {
     const { answered } = this.state;
     let classBtn = '';
     if (answered && answer === correct) {
-      classBtn = 'correct_answer';
+      classBtn = style.correct_answer;
     } else if (answered && answer !== correct) {
-      classBtn = 'wrong_answer';
+      classBtn = style.wrong_answer;
     } else {
-      classBtn = 'answer';
+      classBtn = style.answer;
     }
     return classBtn;
   };
@@ -116,17 +111,10 @@ class Game extends React.Component {
 
     if (isLoading) return (<p>Loading...</p>);
     return (
-      <div>
+      <div className={ style.container_game }>
         <Header />
-        <button
-          data-testid="btn-settings"
-          type="button"
-          onClick={ this.handleSettings }
-        >
-          Settings
-        </button>
         <div>
-          <div>
+          <div className={ style.container_questions }>
             <p data-testid="question-category">{questions[indexQuestion].category}</p>
             <p data-testid="question-text">{questions[indexQuestion].question}</p>
             <div data-testid="answer-options">
