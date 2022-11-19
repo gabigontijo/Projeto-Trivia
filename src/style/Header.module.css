@@ -1,8 +1,7 @@
 .container_header {
-  background-color: orange;
+  background-color: white;
   display: grid;
   grid-template-columns: 1.5fr 1fr;
-  height: 10vh;
 }
 
 .logo_header {
@@ -16,7 +15,6 @@
 .container_user_info {
   display: grid;
   grid-template-columns: 3fr 1fr 1fr;
-  height: 10vh;
 }
 
 .box_user, .box_score {

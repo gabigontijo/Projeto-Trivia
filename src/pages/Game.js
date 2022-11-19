@@ -115,9 +115,22 @@ class Game extends React.Component {
         <Header />
         <div>
           <div className={ style.container_questions }>
-            <p data-testid="question-category">{questions[indexQuestion].category}</p>
-            <p data-testid="question-text">{questions[indexQuestion].question}</p>
-            <div data-testid="answer-options">
+            <div className={ style.box_question }>
+              <p
+                data-testid="question-category"
+                className={ style.question_category }
+              >
+                {questions[indexQuestion].category}
+              </p>
+              <p
+                data-testid="question-text"
+                className={ style.question }
+              >
+                {questions[indexQuestion].question}
+              </p>
+              <Timer />
+            </div>
+            <div data-testid="answer-options" className={ style.box_answer }>
               { sortedAnswers.map((answer, idx) => (
                 <button
                   id={ answer }
@@ -145,7 +158,6 @@ class Game extends React.Component {
                     >
                       Next
                     </button>)}
-              <Timer />
             </div>
           </div>
         </div>

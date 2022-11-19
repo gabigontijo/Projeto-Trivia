@@ -1,7 +1,9 @@
 import PropTypes from 'prop-types';
 import React from 'react';
 import { connect } from 'react-redux';
+import { MdOutlineTimer } from 'react-icons/md';
 import { timerDesablesButton } from '../redux/action';
+import style from '../style/Game.module.css';
 
 class Timer extends React.Component {
   constructor() {
@@ -42,8 +44,9 @@ class Timer extends React.Component {
   render() {
     const { count } = this.state;
     return (
-      <div>
-        <p>30 segundos para responder a pergunta:</p>
+      <div className={ style.timer }>
+        <MdOutlineTimer className={ style.icon_timer } />
+        <p>Tempo:</p>
         <p>{count}</p>
       </div>
     );

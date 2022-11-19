@@ -1,20 +1,114 @@
 .correct_answer {
+  background-color: white;
   border: 3px solid var(--clr-correct-answer);
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 400;
+  height: 50px;
+  letter-spacing: 0.12rem;
+  width: 450px;
 }
 
 .wrong_answer {
+  background-color: white;
   border: 3px solid var(--clr-wrong-answer);
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 400;
+  height: 50px;
+  letter-spacing: 0.12rem;
+  width: 450px;
+}
+
+.answer {
+  background-color: white;
+  border: 1px solid white;
+  border-radius: 100px;
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 400;
+  height: 50px;
+  letter-spacing: 0.12rem;
+  width: 450px;
 }
 
 .container_game {
-  border: 3px solid red;
+  background: url('../img/fundo.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
   display: grid;
-  grid-template-rows: 10vh 90vh;
-  height: 100vh;
-  width: 100vw;
+  font-family: Epilogue , sans-serif;
+  font-size: 1.3rem;
+  grid-template-rows: 10vh 80vh 10vh;
+  max-width: 100vw;
+  min-height: 90vh;
 }
 
 .container_questions {
-  background-color: mediumaquamarine;
-  height: 90vh;
+  align-items: center;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin: 0 80px;
+  min-height: 90vh;
+}
+
+.box_question {
+  align-items: center;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 1px 4px 13px 2px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  height: 286px;
+  justify-content: space-between;
+  margin: 10px;
+  text-align: center;
+  width: 439px;
+}
+
+.question_category {
+  align-items: center;
+  background-color: var(--clr-star);
+  border-radius: 100px;
+  box-shadow: 0 1px 4px 4px rgba(0, 0, 0, 0.1);
+  color: white;
+  display: flex;
+  font-size: 1.1rem;
+  font-weight: 600;
+  height: 45px;
+  justify-content: center;
+  letter-spacing: 0.12rem;
+  position: absolute;
+  text-transform: uppercase;
+  top: 36%;
+  width: 413px;
+}
+
+.question {
+  font-weight: 400;
+  line-height: 150%;
+  padding: 65px 20px 0;
+}
+
+.box_answer {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  justify-content: center;
+}
+
+.timer {
+  align-items: center;
+  color: var(--clr-wrong-answer);
+  display: flex;
+  font-weight: 700;
+  gap: 8px;
+  letter-spacing: 0.12rem;
+}
+
+.icon-timer {
+  font-size: 1.5rem;
 }
