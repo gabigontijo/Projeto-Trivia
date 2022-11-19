@@ -1,11 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+import { RiQuestionMark } from 'react-icons/ri';
 import Header from '../components/Header';
+import Timer from '../components/Timer';
+import Footer from '../components/Footer';
 import { getLocalStorage, removeLocalStorage } from '../service/localStorage';
 import { fetchApiQuestions, countScore, addAssertions } from '../redux/action';
 import style from '../style/Game.module.css';
-import Timer from '../components/Timer';
 
 class Game extends React.Component {
   constructor() {
@@ -132,22 +134,28 @@ class Game extends React.Component {
             </div>
             <div data-testid="answer-options" className={ style.box_answer }>
               { sortedAnswers.map((answer, idx) => (
-                <button
-                  id={ answer }
-                  key={ idx }
-                  data-testid={ answer === questions[indexQuestion].correct_answer
-                    ? 'correct-answer'
-                    : `wrong-answer-${idx}` }
-                  className={ this.handleClasses(
-                    answer,
-                    questions[indexQuestion].correct_answer,
-                  ) }
-                  type="button"
-                  onClick={ this.handleClickAnswer }
-                  disabled={ disabledButtonAnswers }
-                >
-                  {answer}
-                </button>
+                <div key={ idx } className={ style.box_btn_answer }>
+                  <button
+                    id={ answer }
+                    data-testid={ answer === questions[indexQuestion].correct_answer
+                      ? 'correct-answer'
+                      : `wrong-answer-${idx}` }
+                    className={ this.handleClasses(
+                      answer,
+                      questions[indexQuestion].correct_answer,
+                    ) }
+                    type="button"
+                    onClick={ this.handleClickAnswer }
+                    disabled={ disabledButtonAnswers }
+                  >
+                    {answer}
+                  </button>
+                  <div className={ style.btn_icon }>
+                    {/* { answer === questions[indexQuestion].correct_answer
+                      ? 'A' : 'B' } */}
+                    <RiQuestionMark />
+                  </div>
+                </div>
               )) }
               { btnNext
                   && (
@@ -155,12 +163,14 @@ class Game extends React.Component {
                       data-testid="btn-next"
                       type="button"
                       onClick={ this.handleClickNext }
+                      className={ style.btn_next }
                     >
                       Next
                     </button>)}
             </div>
           </div>
         </div>
+        <Footer />
       </div>
     );
   }

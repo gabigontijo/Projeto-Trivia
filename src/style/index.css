@@ -2,13 +2,29 @@
 
 :root {
 
+  /* <-------------------------- Colors --------------------------> */
+
   --clr-header: #f1f1f1;
 
   --clr-correct-answer: rgb(6, 240, 15);
 
   --clr-wrong-answer: red;
 
+  --clr-options-answer: #e9e9e9;
+
   --clr-star: #f9ba18;
 
   --clr-settings: #999;
+
+  --clr-white: white;
+
+  --clr-btn_next: #2fc18c;
+
+  /* <-------------------------- Colors --------------------------> */
+
+  --shadow-answer-correct: 0 0 10px 5px rgba(6, 240, 15, 0.4);
+
+  --shadow-wrong-correct: 0 0 10px 5px rgba(255, 0, 0, 0.4);
+
+  --shadow-btn-next: 0 4px 4px rgba(0, 0, 0, 0.25);
 }

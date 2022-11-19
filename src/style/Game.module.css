@@ -1,18 +1,38 @@
 .correct_answer {
-  background-color: white;
-  border: 3px solid var(--clr-correct-answer);
+  background-color: var(--clr-white);
   border-radius: 100px;
+  box-shadow: var(--shadow-answer-correct);
   cursor: pointer;
   font-size: 1.1rem;
   font-weight: 400;
   height: 50px;
   letter-spacing: 0.12rem;
   width: 450px;
+}
+
+.correct_answer .btn_icon {
+  color: var(--clr-correct-answer);
 }
 
 .wrong_answer {
-  background-color: white;
-  border: 3px solid var(--clr-wrong-answer);
+  background-color: var(--clr-white);
+  border-radius: 100px;
+  box-shadow: var(--shadow-wrong-correct);
+  cursor: pointer;
+  font-size: 1.1rem;
+  font-weight: 400;
+  height: 50px;
+  letter-spacing: 0.12rem;
+  width: 450px;
+}
+
+.wrong_answer .btn_icon {
+  color: var(--clr-wrong-answer);
+}
+
+.answer {
+  background-color: var(--clr-white);
+  border: 1px solid var(--clr-white);
   border-radius: 100px;
   cursor: pointer;
   font-size: 1.1rem;
@@ -22,16 +42,24 @@
   width: 450px;
 }
 
-.answer {
-  background-color: white;
-  border: 1px solid white;
-  border-radius: 100px;
-  cursor: pointer;
-  font-size: 1.1rem;
-  font-weight: 400;
-  height: 50px;
-  letter-spacing: 0.12rem;
-  width: 450px;
+.box_btn_answer {
+  display: block;
+  position: relative;
+}
+
+.box_btn_answer .btn_icon {
+  align-items: center;
+  background-color: var(--clr-options-answer);
+  border-radius: 50%;
+  color: var(--clr-star);
+  display: flex;
+  font-size: 1.5rem;
+  height: 45px;
+  justify-content: center;
+  margin: 3px;
+  position: absolute;
+  top: 0;
+  width: 45px;
 }
 
 .container_game {
@@ -41,9 +69,9 @@
   display: grid;
   font-family: Epilogue , sans-serif;
   font-size: 1.3rem;
-  grid-template-rows: 10vh 80vh 10vh;
+  grid-template-rows: 10vh 77vh 10vh;
+  max-height: 90vh;
   max-width: 100vw;
-  min-height: 90vh;
 }
 
 .container_questions {
@@ -56,7 +84,7 @@
 
 .box_question {
   align-items: center;
-  background-color: white;
+  background-color: var(--clr-white);
   border-radius: 10px;
   box-shadow: 1px 4px 13px 2px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -73,7 +101,7 @@
   background-color: var(--clr-star);
   border-radius: 100px;
   box-shadow: 0 1px 4px 4px rgba(0, 0, 0, 0.1);
-  color: white;
+  color: var(--clr-white);
   display: flex;
   font-size: 1.1rem;
   font-weight: 600;
@@ -111,4 +139,18 @@
 
 .icon-timer {
   font-size: 1.5rem;
+}
+
+.btn_next {
+  background-color: var(--clr-btn_next);
+  border-radius: 5px;
+  box-shadow: var(--shadow-btn-next);
+  color: var(--clr-white);
+  cursor: pointer;
+  font-size: 1.2rem;
+  font-weight: 700;
+  height: 45px;
+  letter-spacing: 0.12rem;
+  text-transform: uppercase;
+  width: 450px;
 }

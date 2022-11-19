@@ -15,7 +15,6 @@ class Header extends React.Component {
 
   render() {
     const { name, score, email } = this.props;
-    // console.log(this.props);
     const hash = md5(email).toString();
     return (
       <header className={ style.container_header }>
