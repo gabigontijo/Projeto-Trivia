@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import md5 from 'crypto-js/md5';
 import { GiRoundStar } from 'react-icons/gi';
 import { IoMdSettings } from 'react-icons/io';
+import { NavLink } from 'react-router-dom';
 import logoTrivia from '../img/logoTrivia.png';
 import style from '../style/Header.module.css';
 
@@ -33,10 +34,12 @@ class Header extends React.Component {
             </p>
           </div>
           <div className={ style.box_btn_settings }>
-            <IoMdSettings
-              className={ style.btn_settings }
-              data-testid="btn-settings"
-            />
+            <NavLink to="/settings">
+              <IoMdSettings
+                className={ style.btn_settings }
+                data-testid="btn-settings"
+              />
+            </NavLink>
           </div>
         </div>
       </header>

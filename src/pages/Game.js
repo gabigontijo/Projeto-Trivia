@@ -1,12 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
-import { RiQuestionMark } from 'react-icons/ri';
+// import { RiQuestionMark } from 'react-icons/ri';
 import Header from '../components/Header';
 import Timer from '../components/Timer';
 import Footer from '../components/Footer';
 import { getLocalStorage, removeLocalStorage } from '../service/localStorage';
 import { fetchApiQuestions, countScore, addAssertions } from '../redux/action';
+import amarelo from '../img/amarelo.png';
+import rosa from '../img/rosa.png';
+import verde from '../img/verde.png';
+import azul from '../img/azul.png';
 import style from '../style/Game.module.css';
 
 class Game extends React.Component {
@@ -115,7 +119,11 @@ class Game extends React.Component {
     return (
       <div className={ style.container_game }>
         <Header />
-        <div>
+        <main>
+          <img className={ style.amarelo } src={ amarelo } alt="interrogação amarelo" />
+          <img className={ style.azul } src={ azul } alt="interrogação azul" />
+          <img className={ style.rosa } src={ rosa } alt="interrogação rosa" />
+          <img className={ style.verde } src={ verde } alt="interrogação verde" />
           <div className={ style.container_questions }>
             <div className={ style.box_question }>
               <p
@@ -150,11 +158,11 @@ class Game extends React.Component {
                   >
                     {answer}
                   </button>
-                  <div className={ style.btn_icon }>
-                    {/* { answer === questions[indexQuestion].correct_answer
-                      ? 'A' : 'B' } */}
+                  {/* <div className={ style.btn_icon }>
+                    { answer === questions[indexQuestion].correct_answer
+                      ? 'A' : 'B' }
                     <RiQuestionMark />
-                  </div>
+                  </div> */}
                 </div>
               )) }
               { btnNext
@@ -169,7 +177,7 @@ class Game extends React.Component {
                     </button>)}
             </div>
           </div>
-        </div>
+        </main>
         <Footer />
       </div>
     );

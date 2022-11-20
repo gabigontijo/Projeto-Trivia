@@ -85,6 +85,7 @@
 .box_question {
   align-items: center;
   background-color: var(--clr-white);
+  border: 5px solid green;
   border-radius: 10px;
   box-shadow: 1px 4px 13px 2px rgba(0, 0, 0, 0.2);
   display: flex;
@@ -92,8 +93,10 @@
   height: 286px;
   justify-content: space-between;
   margin: 10px;
+  max-width: 60%;
+  min-width: 439px;
+  position: relative;
   text-align: center;
-  width: 439px;
 }
 
 .box_question .question_category {
@@ -110,7 +113,7 @@
   letter-spacing: 0.12rem;
   position: absolute;
   text-transform: uppercase;
-  top: 36%;
+  top: -38px;
   width: 413px;
 }
 
@@ -153,4 +156,36 @@
   letter-spacing: 0.12rem;
   text-transform: uppercase;
   width: 450px;
+}
+
+.amarelo {
+  height: 221px;
+  left: -1%;
+  position: absolute;
+  top: 10%;
+  width: 150px;
+}
+
+.verde {
+  height: 221px;
+  left: 45%;
+  position: absolute;
+  top: 50%;
+  width: 150px;
+}
+
+.rosa {
+  height: 134px;
+  left: 40%;
+  position: absolute;
+  top: 25%;
+  width: 92px;
+}
+
+.azul {
+  height: 153px;
+  left: 2%;
+  position: absolute;
+  top: 60%;
+  width: 104px;
 }
