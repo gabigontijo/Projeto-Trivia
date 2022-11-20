@@ -78,6 +78,7 @@
   align-items: center;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  justify-content: center;
   margin: 0 80px;
   min-height: 90vh;
 }
@@ -93,7 +94,7 @@
   height: 286px;
   justify-content: space-between;
   margin: 10px;
-  max-width: 60%;
+  max-width: 68%;
   min-width: 439px;
   position: relative;
   text-align: center;
