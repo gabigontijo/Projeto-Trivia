@@ -10,7 +10,6 @@ const OBJ = {
   name: '',
   email: '',
 };
-
 class Login extends React.Component {
   state = { ...OBJ };
 
