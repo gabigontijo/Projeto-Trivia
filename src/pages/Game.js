@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
+// import { RiQuestionMark } from 'react-icons/ri';
 import Header from '../components/Header';
+import Timer from '../components/Timer';
+import Footer from '../components/Footer';
 import { getLocalStorage, removeLocalStorage } from '../service/localStorage';
 import { fetchApiQuestions, countScore, addAssertions } from '../redux/action';
-import '../style/Game.css';
-import Timer from '../components/Timer';
+import amarelo from '../img/amarelo.png';
+import rosa from '../img/rosa.png';
+import verde from '../img/verde.png';
+import azul from '../img/azul.png';
+import style from '../style/Game.module.css';
 
 class Game extends React.Component {
   constructor() {
@@ -39,11 +45,6 @@ class Game extends React.Component {
       this.setState({ sortedAnswers: this.handleSortAnswers(answers) });
     });
   }
-
-  handleSettings = () => {
-    const { history } = this.props;
-    history.push('/settings');
-  };
 
   handleCountDificult = (dificult) => {
     const one = 1;
@@ -101,11 +102,11 @@ class Game extends React.Component {
     const { answered } = this.state;
     let classBtn = '';
     if (answered && answer === correct) {
-      classBtn = 'correct_answer';
+      classBtn = style.correct_answer;
     } else if (answered && answer !== correct) {
-      classBtn = 'wrong_answer';
+      classBtn = style.wrong_answer;
     } else {
-      classBtn = 'answer';
+      classBtn = style.answer;
     }
     return classBtn;
   };
@@ -116,37 +117,53 @@ class Game extends React.Component {
 
     if (isLoading) return (<p>Loading...</p>);
     return (
-      <div>
+      <div className={ style.container_game }>
         <Header />
-        <button
-          data-testid="btn-settings"
-          type="button"
-          onClick={ this.handleSettings }
-        >
-          Settings
-        </button>
-        <div>
-          <div>
-            <p data-testid="question-category">{questions[indexQuestion].category}</p>
-            <p data-testid="question-text">{questions[indexQuestion].question}</p>
-            <div data-testid="answer-options">
+        <main>
+          <img className={ style.amarelo } src={ amarelo } alt="interrogação amarelo" />
+          <img className={ style.azul } src={ azul } alt="interrogação azul" />
+          <img className={ style.rosa } src={ rosa } alt="interrogação rosa" />
+          <img className={ style.verde } src={ verde } alt="interrogação verde" />
+          <div className={ style.container_questions }>
+            <div className={ style.box_question }>
+              <p
+                data-testid="question-category"
+                className={ style.question_category }
+              >
+                {questions[indexQuestion].category}
+              </p>
+              <p
+                data-testid="question-text"
+                className={ style.question }
+              >
+                {questions[indexQuestion].question}
+              </p>
+              <Timer />
+            </div>
+            <div data-testid="answer-options" className={ style.box_answer }>
               { sortedAnswers.map((answer, idx) => (
-                <button
-                  id={ answer }
-                  key={ idx }
-                  data-testid={ answer === questions[indexQuestion].correct_answer
-                    ? 'correct-answer'
-                    : `wrong-answer-${idx}` }
-                  className={ this.handleClasses(
-                    answer,
-                    questions[indexQuestion].correct_answer,
-                  ) }
-                  type="button"
-                  onClick={ this.handleClickAnswer }
-                  disabled={ disabledButtonAnswers }
-                >
-                  {answer}
-                </button>
+                <div key={ idx } className={ style.box_btn_answer }>
+                  <button
+                    id={ answer }
+                    data-testid={ answer === questions[indexQuestion].correct_answer
+                      ? 'correct-answer'
+                      : `wrong-answer-${idx}` }
+                    className={ this.handleClasses(
+                      answer,
+                      questions[indexQuestion].correct_answer,
+                    ) }
+                    type="button"
+                    onClick={ this.handleClickAnswer }
+                    disabled={ disabledButtonAnswers }
+                  >
+                    {answer}
+                  </button>
+                  {/* <div className={ style.btn_icon }>
+                    { answer === questions[indexQuestion].correct_answer
+                      ? 'A' : 'B' }
+                    <RiQuestionMark />
+                  </div> */}
+                </div>
               )) }
               { btnNext
                   && (
@@ -154,13 +171,14 @@ class Game extends React.Component {
                       data-testid="btn-next"
                       type="button"
                       onClick={ this.handleClickNext }
+                      className={ style.btn_next }
                     >
                       Next
                     </button>)}
-              <Timer />
             </div>
           </div>
-        </div>
+        </main>
+        <Footer />
       </div>
     );
   }

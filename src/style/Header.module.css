@@ -1,0 +1,51 @@
+.container_header {
+  background-color: white;
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.logo_header {
+  height: 190px;
+  left: 17%;
+  padding-top: 10px;
+  position: absolute;
+  width: 190px;
+}
+
+.container_user_info {
+  display: grid;
+  grid-template-columns: 3fr 1fr 1fr;
+}
+
+.box_user, .box_score {
+  align-items: center;
+  display: flex;
+  font-family: Epilogue , sans-serif;
+  font-size: 1.2rem;
+  gap: 10px;
+  line-height: 24px;
+}
+
+.logo_user {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.icon_star {
+  color: var(--clr-star);
+  font-size: 2rem;
+}
+
+.box_btn_settings {
+  align-items: center;
+  display: flex;
+  justify-content: center;
+}
+
+.btn_settings {
+  color: var(--clr-settings);
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+}
