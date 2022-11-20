@@ -3,11 +3,11 @@
 
 <svg
    version="1.1"
-   id="svg10461"
+   id="svg55"
    width="1706.6667"
    height="854.66669"
    viewBox="0 0 1706.6667 854.66669"
-   sodipodi:docname="25235 2.png.svg"
+   sodipodi:docname="25235 3.png.svg"
    inkscape:version="1.1.2 (0a00cf5339, 2022-02-04)"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
@@ -15,9 +15,9 @@
    xmlns="http://www.w3.org/2000/svg"
    xmlns:svg="http://www.w3.org/2000/svg">
   <defs
-     id="defs10465" />
+     id="defs59" />
   <sodipodi:namedview
-     id="namedview10463"
+     id="namedview57"
      pagecolor="#ffffff"
      bordercolor="#666666"
      borderopacity="1.0"
@@ -25,27 +25,24 @@
      inkscape:pageopacity="0.0"
      inkscape:pagecheckerboard="0"
      showgrid="false"
-     inkscape:zoom="0.62148054"
-     inkscape:cx="657.30135"
-     inkscape:cy="369.27946"
+     inkscape:zoom="0.66766984"
+     inkscape:cx="602.84286"
+     inkscape:cy="375.18543"
      inkscape:window-width="2560"
      inkscape:window-height="1016"
      inkscape:window-x="0"
      inkscape:window-y="27"
      inkscape:window-maximized="1"
-     inkscape:current-layer="g10467" />
+     inkscape:current-layer="g61" />
   <g
      inkscape:groupmode="layer"
      inkscape:label="Image"
-     id="g10467">
-    <g
-       id="g11658"
-       transform="translate(-3.4121832,3.8669904)">
-      <image
-         width="1706.6667"
-         height="854.66669"
-         preserveAspectRatio="none"
-         xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAAKBCAYAAAAIrwYEAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA
+     id="g61">
+    <image
+       width="1706.6667"
+       height="854.66669"
+       preserveAspectRatio="none"
+       xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAAKBCAYAAAAIrwYEAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA
 AXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUABSRxSURBVHgB7L3dsjQ7bp4J1P6kVut/LCt84qO5
 gonwBcz92rdiX4HPHeHfUIQsS+reuzAr6yOYD16CWbV+dnfbsxmxVmVlkiAA4gVAJjPL7a1EhB+f
 7h7HsX7aH3BRHj/Cc9fmGZ2r69Tf8b2rx/af0fNVH1dtXqn/Xr6+2l52Y/sZ3b2n/u/T/j/ad9rD
@@ -5961,10 +5958,12 @@ WHxcIatrk4wFXvu4Vt/Sd+h/Oq6jMRrZRTI/eE5d7oaMvbp8Dj4SOz6UPTv0frbvcrx3zPXHHltQ
 yh3NwW7+rxijW9m4x1ev9ufJ/9UyrvWBzX+T/02bJv+T/1vYOPn/+rio/k/+943rV/4dlv//H5g/
 0TzxysX8AAAAAElFTkSuQmCC
 "
-         id="image10469" />
+       id="image63" />
+    <g
+       id="g1567">
       <image
          width="1706.6667"
-         height="864.16339"
+         height="854.66669"
          preserveAspectRatio="none"
          xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABQAAAALQCAYAAADPfd1WAAAACXBIWXMAAAsTAAALEwEAmpwYAAAA
 AXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAArSjSURBVHgB7P3drmzbspyHZdbWHclLi8Qh5Wcg
@@ -9080,10 +9079,10 @@ M04Sj8fDWmebELlfci3BXrHYQ915+7Hn0TQ9P8WFfZcG2Icnz7wvP7f523rCftyfujz1Er6/DJYx
 zOzB18UGplgDee3NOMaFyukr4o968r5g2xeb33T4016L/xHLWR/xL/7F//S1/Jn4F//iX/yLf/H/
 HIv4N/Hv4p/XiH/x/y/j//8DPV3WivmNlEAAAAAASUVORK5CYII=
 "
-         id="image10479"
+         id="image153"
          x="0"
-         y="0"
-         style="opacity:0.853267" />
+         y="1.4210855e-14"
+         style="opacity:0.88" />
     </g>
   </g>
 </svg>

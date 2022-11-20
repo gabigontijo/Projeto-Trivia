@@ -1,3 +1,15 @@
+.container_game {
+  background: url('../img/fundo.svg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: grid;
+  font-family: Epilogue , sans-serif;
+  font-size: 1.3rem;
+  grid-template-rows: 10vh 77vh 10vh;
+  max-height: 90vh;
+  max-width: 100vw;
+}
+
 .correct_answer {
   background-color: var(--clr-white);
   border-radius: 100px;
@@ -62,18 +74,6 @@
   width: 45px;
 }
 
-.container_game {
-  background: url('../img/fundo.svg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: grid;
-  font-family: Epilogue , sans-serif;
-  font-size: 1.3rem;
-  grid-template-rows: 10vh 77vh 10vh;
-  max-height: 90vh;
-  max-width: 100vw;
-}
-
 .container_questions {
   align-items: center;
   display: grid;
@@ -96,7 +96,7 @@
   width: 439px;
 }
 
-.question_category {
+.box_question .question_category {
   align-items: center;
   background-color: var(--clr-star);
   border-radius: 100px;

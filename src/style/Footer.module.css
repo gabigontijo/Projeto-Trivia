@@ -1,14 +1,16 @@
 .container_footer {
   align-items: center;
-  background-color: white;
+  background-color: var(--bg-footer);
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr;
   justify-content: center;
+  max-height: 10vh;
 }
 
 .title_footer {
   align-items: center;
+  color: var(--clr-star);
   display: grid;
   font-size: 1.2rem;
   grid-column: 1/6;
@@ -17,6 +19,8 @@
 
 .info_team {
   align-items: center;
+  background-color: var(--bg-footer);
+  color: var(--clr-star);
   display: flex;
   flex-direction: column;
   font-size: 1rem;
@@ -24,9 +28,9 @@
   padding-bottom: 10px;
 }
 
-.social {
+/* .social {
   cursor: pointer;
   display: flex;
   font-size: 1.2rem;
   gap: 10px;
-}
+} */

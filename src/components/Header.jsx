@@ -8,11 +8,6 @@ import logoTrivia from '../img/logoTrivia.png';
 import style from '../style/Header.module.css';
 
 class Header extends React.Component {
-  handleSettings = () => {
-    const { history } = this.props;
-    history.push('/settings');
-  };
-
   render() {
     const { name, score, email } = this.props;
     const hash = md5(email).toString();
@@ -41,8 +36,6 @@ class Header extends React.Component {
             <IoMdSettings
               className={ style.btn_settings }
               data-testid="btn-settings"
-              type="button"
-              onClick={ this.handleSettings }
             />
           </div>
         </div>
@@ -60,9 +53,6 @@ Header.propTypes = {
   email: PropTypes.string.isRequired,
   name: PropTypes.string.isRequired,
   score: PropTypes.number.isRequired,
-  history: PropTypes.shape({
-    push: PropTypes.func.isRequired,
-  }).isRequired,
 };
 
 export default connect(mapStateToProps)(Header);
