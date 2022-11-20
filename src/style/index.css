@@ -29,4 +29,8 @@
   --shadow-wrong-correct: 0 0 10px 5px rgba(255, 0, 0, 0.4);
 
   --shadow-btn-next: 0 4px 4px rgba(0, 0, 0, 0.25);
+
+  --shadow-box-question: 1px 4px 13px 2px rgba(255, 255, 255, 0.2);
+
+  --shadow-category: 0 1px 4px 4px rgba(0, 0, 0, 0.1);
 }
