@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100;0,200;0,300;0,400;0,500;1,100;1,200;1,300;1,400&display=swap') ;
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.ranking {
+  align-items: center;
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  overflow: auto;
+  width: 100vw;
+}
+
+.ranking__container {
+  align-items: center;
+  background-image: url('../img/fundo.feedback.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: center;
+  text-align: center;
+  width: 100vw;
+}
+
+.ranking__logo {
+  margin-top: -70px;
+}
+
+.ranking__logo img {
+  height: 150px;
+  width: 150px;
+}
+
+.ranking__container__players {
+  background-color: white;
+  border-radius: 10px;
+  height: 450px;
+  margin-top: 30px;
+  width: 500px;
+}
+
+.container__player {
+  align-items: center;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  height: 200px;
+  margin-top: -10px;
+  overflow: auto;
+  width: 500px;
+}
+
+.title__player {
+  background-color: white;
+
+}
+
+.title__player h1 {
+  color: #3c1b7a;
+  font-family: Epilogue , sans-serif;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.btn__player {
+  margin-top: 25px;
+}
+
+.btn__player button {
+  background: #2fc18c;
+  border-radius: 5px;
+  border-style: none;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  color: white;
+  font-family: Epilogue , sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  height: 35px;
+  letter-spacing: 0.12em;
+  line-height: 150%;
+  text-transform: uppercase;
+  width: 80%;
+}
+
+.player {
+  align-items: center;
+  display: flex;
+  height: 40px;
+  margin-bottom: 10px;
+  margin-top: 20px;
+  width: 90%;
+
+}
+
+.player img {
+  border-radius: 50%;
+  height: 50px;
+  width: 50px;
+}
+
+.player__name {
+  align-items: center;
+  background-color: #ebebeb;
+  border-radius: 100px;
+  display: flex;
+  justify-content: start;
+  width: 65%;
+
+}
+
+.player__name p {
+  font-family: Epilogue , sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  margin-left: 20px;
+}
+
+.player__score {
+  align-items: center;
+  background: white;
+  border-radius: 100px;
+  box-shadow: 0 4px 22px rgba(0, 0, 0, 0.25);
+  display: flex;
+  justify-content: center;
+  margin-left: -5px;
+  width: 35%;
+}
+
+.player__score span {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.player__score p {
+  font-family: Epilogue , sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 150%;
+}

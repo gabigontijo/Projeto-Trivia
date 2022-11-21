@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import md5 from 'crypto-js/md5';
-import { getLocalStorage, saveRankingLocalStorage } from '../service/localStorage';
+import {
+  getLocalStorage,
+  saveRankingLocalStorage,
+} from '../service/localStorage';
+import logoTrivia from '../img/logoTrivia.png';
+import style from '../style/Ranking.module.css';
 
 class Ranking extends Component {
   constructor() {
@@ -33,20 +38,26 @@ class Ranking extends Component {
     };
 
     if (!JSON.parse(localStorage.getItem('ranking'))) {
-      this.setState((prev) => ({
-        rankingPlayers: [...prev.rankingPlayers, playerData],
-      }), () => {
-        const { rankingPlayers } = this.state;
-        saveRankingLocalStorage(rankingPlayers);
-      });
+      this.setState(
+        (prev) => ({
+          rankingPlayers: [...prev.rankingPlayers, playerData],
+        }),
+        () => {
+          const { rankingPlayers } = this.state;
+          saveRankingLocalStorage(rankingPlayers);
+        },
+      );
     } else {
       const ranking = JSON.parse(getLocalStorage('ranking'));
-      this.setState({
-        rankingPlayers: [...ranking, playerData],
-      }, () => {
-        const { rankingPlayers } = this.state;
-        saveRankingLocalStorage(rankingPlayers);
-      });
+      this.setState(
+        {
+          rankingPlayers: [...ranking, playerData],
+        },
+        () => {
+          const { rankingPlayers } = this.state;
+          saveRankingLocalStorage(rankingPlayers);
+        },
+      );
     }
   };
 
@@ -63,23 +74,41 @@ class Ranking extends Component {
   render() {
     const { rankingPlayers } = this.state;
     return (
-      <div>
-        <h1 data-testid="ranking-title">Ranking</h1>
-        <button
-          type="button"
-          data-testid="btn-go-home"
-          onClick={ this.handleClick }
-        >
-          Home
-        </button>
-        <div>
-          { this.orderScorePlayers(rankingPlayers).map((player, index) => (
-            <div key={ index }>
-              <img src={ player.imgPlayer } alt="icon-player" />
-              <p data-testid={ `player-name-${index}` }>{player.name}</p>
-              <p data-testid={ `player-score-${index}` }>{player.score}</p>
+      <div className={ style.ranking }>
+        <div className={ style.ranking__container }>
+          <div className={ style.ranking__container__players }>
+            <div className={ style.ranking__logo }>
+              <img className="logo" src={ logoTrivia } alt="logo Trivia" />
             </div>
-          ))}
+            <div className={ style.title__player }>
+              <h1 data-testid="ranking-title">Ranking</h1>
+            </div>
+            <div className={ style.container__player }>
+              {this.orderScorePlayers(rankingPlayers).map((player, index) => (
+                <div className={ style.player } key={ index }>
+                  <div className={ style.player__name }>
+                    <img src={ player.imgPlayer } alt="icon-player" />
+                    <p data-testid={ `player-name-${index}` }>{player.name}</p>
+                  </div>
+                  <div className={ style.player__score }>
+                    <p data-testid={ `player-score-${index}` }>
+                      <span className={ style.icon__star }>⭐</span>
+                      {`${player.score} pontos`}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className={ style.btn__player }>
+              <button
+                type="button"
+                data-testid="btn-go-home"
+                onClick={ this.handleClick }
+              >
+                Jogar Novamente
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     );
