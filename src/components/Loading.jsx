@@ -1,10 +1,14 @@
-import PropTypes from 'prop-types';
 import React from 'react';
-import { connect } from 'react-redux';
-import { MdOutlineTimer } from 'react-icons/md';
-import { timerDesablesButton } from '../redux/action';
-import style from '../style/Game.module.css';
+import style from '../style/Loading.module.css';
 
-class Loading extends React.Component {};
+class Loading extends React.Component {
+  render() {
+    return (
+      <div className={ style.container }>
+        <div className={ style.double_up } />
+      </div>
+    );
+  }
+}
 
 export default Loading;
