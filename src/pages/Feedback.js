@@ -4,16 +4,19 @@ import { connect } from 'react-redux';
 import { MD5 } from 'crypto-js';
 import logoTrivia from '../img/logoTrivia.png';
 import '../style/Feedback.css';
+import { cleanAssertion } from '../redux/action';
 
 class Feedback extends React.Component {
   handleClickPlayAgain = () => {
-    const { history } = this.props;
+    const { history, dispatch } = this.props;
+    dispatch(cleanAssertion());
     history.push('/');
   };
 
   handleClickRancking = () => {
-    const { history } = this.props;
+    const { history, dispatch } = this.props;
     history.push('/ranking');
+    dispatch(cleanAssertion());
   };
 
   render() {
@@ -102,6 +105,7 @@ Feedback.propTypes = {
   history: PropTypes.shape({
     push: PropTypes.func,
   }).isRequired,
+  dispatch: PropTypes.func.isRequired,
   score: PropTypes.number.isRequired,
   email: PropTypes.string.isRequired,
 };

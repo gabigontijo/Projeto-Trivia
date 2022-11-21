@@ -15,7 +15,7 @@ class Timer extends React.Component {
 
   // Esperando 5 segundos para INICIAR o timer na tela.
   componentDidMount() {
-    const fivSeconds = 5000;
+    const fivSeconds = 1000;
     setTimeout(() => {
       this.timerGame();
     }, fivSeconds);
