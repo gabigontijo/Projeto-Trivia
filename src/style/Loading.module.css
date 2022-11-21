@@ -9,7 +9,7 @@
 
 .double_up:before {
   animation: spin 0.5s infinite linear;
-  border: 10px var(--primary) double;
+  border: 10px var(--clr-white) double;
   border-left-style: solid;
   border-radius: 100%;
   content: '';
