@@ -1,0 +1,30 @@
+.container {
+  align-items: center;
+  background: url('../img/fundo.svg');
+  color: var(--clr-white);
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+}
+
+.double_up:before {
+  animation: spin 0.5s infinite linear;
+  border: 10px var(--primary) double;
+  border-left-style: solid;
+  border-radius: 100%;
+  content: '';
+  display: block;
+  height: 100px;
+  width: 100px; }
+
+@keyframes spin {
+
+  to {
+    transform: rotate(360deg);
+  } }
+
+@keyframes spin {
+
+  to {
+    transform: rotate(360deg);
+  } }

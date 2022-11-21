@@ -5,6 +5,7 @@ import { connect } from 'react-redux';
 import Header from '../components/Header';
 import Timer from '../components/Timer';
 import Footer from '../components/Footer';
+import Loading from '../components/Loading';
 import { getLocalStorage, removeLocalStorage } from '../service/localStorage';
 import { fetchApiQuestions, countScore, addAssertions } from '../redux/action';
 import amarelo from '../img/amarelo.png';
@@ -115,7 +116,7 @@ class Game extends React.Component {
     const { isLoading, questions, indexQuestion, btnNext, sortedAnswers } = this.state;
     const { disabledButtonAnswers } = this.props;
 
-    if (isLoading) return (<p>Loading...</p>);
+    if (isLoading) return (<Loading />);
     return (
       <div className={ style.container_game }>
         <Header />
