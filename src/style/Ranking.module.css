@@ -111,7 +111,7 @@ body {
   background-color: #ebebeb;
   border-radius: 100px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   width: 65%;
 
 }
@@ -122,7 +122,7 @@ body {
   font-style: normal;
   font-weight: 400;
   line-height: 150%;
-  margin-left: 15px;
+  margin-left: 20px;
 }
 
 .player__score {
