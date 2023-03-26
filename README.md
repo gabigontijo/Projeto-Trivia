@@ -1,3 +1,5 @@
+  [![Readme Card](https://github-readme-stats.vercel.app/api/pin/?username=gabigontijo&repo=Projeto-Trivia)](https://github.com/gabigontijo/github-readme-stats)
+
 # :construction: README em construção ! :construction:
 <!-- Olá, Tryber!
 Esse é apenas um arquivo inicial para o README do seu projeto.
