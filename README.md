@@ -4,16 +4,16 @@
 Nesse projeto é desenvolvido um jogo de perguntas e respostas baseado no jogo Trivia (tipo um show do milhão americano) utilizando React e Redux.
 
 ## :books: Funcionalidades
-## <b>Logar</b>: 
+### <b>Logar</b>
 * Validação de email e senha
 * Se o email tiver cadastro no site Gravatar, ter sua foto associada ao perfil da pessoa usuária.
-## <b>Jogar</b>: Retorna o(s) produto(s) da loja TrybeSmith
+### <b>Jogar</b>
 * Após o Login acessa a página de perguntas
-* Deve Marcar uma resposta dentre as perguntas disponíveis, em uma rodado com 5 perguntas
+* Deve Marcar uma resposta dentre as perguntas disponíveis, em uma rodada com 5 perguntas
 * A resposta deve ser marcada antes do contador de tempo chegar a zero, caso contrário a resposta deverá ser considerada errada
-## <b>Vizualizar Ranking</b>: Atualiza item na loja TrybeSmith
+### <b>Vizualizar Ranking</b>
 * Após 5 perguntas respondidas, redirecionado para a tela de score, onde se tem uma mensagem de acordo com o número de acertos
-## <b>Configurar o jogo</b>: Exclui item da loja TrybeSmith
+### <b>Configurar o jogo</b>
 * Acesso ao button de configurações no header, sendo possível selecionar Category, Difficulty, Type e Enconding.
  
 
